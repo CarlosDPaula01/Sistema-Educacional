@@ -2,9 +2,12 @@ package com.sistemaeducacional.application.sistemaeducacional.Model;
 
 import java.util.List;
 
+import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
+import lombok.Getter;
 
 @Entity
+@Getter
 public class MateriaModel {
     
     private List<CursoModel> cursos;
@@ -12,9 +15,17 @@ public class MateriaModel {
     private List<AlunoModel> alunos;
     private String cargaHoraria;
     private String requisitos;
-    private String horarios;
     private String preRequisitoPara;
+    private String horarios;
     private String status;
 
-    
+    public MateriaModel(List<CursoModel> cursos, List<ProfessorModel> professores, String cargaHoraria,
+String requisitos, String preRequisitospara, String horarios ){
+    this.cursos = cursos;
+    this.professores = professores;
+    this.cargaHoraria = cargaHoraria;
+    this.requisitos = requisitos;
+    this.preRequisitoPara = preRequisitospara;
+    this.horarios = horarios;
+    }
 }

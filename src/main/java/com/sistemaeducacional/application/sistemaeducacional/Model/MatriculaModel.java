@@ -28,5 +28,6 @@ public class MatriculaModel {
     public MatriculaModel(AlunoModel aluno){
         this.aluno = aluno;
         this.curso = aluno.getCurso();
+        dataMatricula = dataMatricula.now();
     }
 }
