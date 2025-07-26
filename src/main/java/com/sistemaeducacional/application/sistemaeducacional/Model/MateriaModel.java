@@ -4,12 +4,20 @@ import java.util.List;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 
 @Entity
 @Getter
 public class MateriaModel {
     
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private List<CursoModel> cursos;
     private List<ProfessorModel> professores;
     private List<AlunoModel> alunos;
